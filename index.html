@@ -36,6 +36,313 @@
       #print-report-area { position: absolute; left: 0; top: 0; width: 100%; }
     }
   </style>
+
+<style>
+/* =========================================================
+   BHOBGHURE — MODERN VISUAL REFRESH
+   ========================================================= */
+:root{
+  --app-bg:#f3f7f6;
+  --surface:#ffffff;
+  --ink:#172d2b;
+  --muted:#71827f;
+  --line:#e1ebe8;
+  --primary:#087f70;
+  --primary-dark:#07594f;
+  --accent:#c5ed72;
+  --shadow:0 12px 32px rgba(18,55,49,.075);
+  --shadow-soft:0 5px 18px rgba(18,55,49,.055);
+}
+html{background:var(--app-bg);scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(ellipse at 8% 0%,rgba(197,237,114,.15),transparent 28rem),
+    radial-gradient(ellipse at 100% 18%,rgba(8,127,112,.075),transparent 30rem),
+    var(--app-bg)!important;
+  color:var(--ink)!important;
+  font-family:'Hind Siliguri',sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+button,[role="button"]{ -webkit-tap-highlight-color:transparent; }
+button{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease,transform .18s ease}
+button:active{transform:scale(.975)}
+input,select,textarea{
+  border:1px solid #dce7e3!important;
+  border-radius:13px!important;
+  background:#f8fbfa!important;
+  color:#193632!important;
+  min-height:42px;
+  box-shadow:inset 0 1px 1px rgba(20,50,45,.025);
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+textarea{min-height:88px}
+input:focus,select:focus,textarea:focus{
+  outline:none!important;
+  border-color:#36a895!important;
+  background:#fff!important;
+  box-shadow:0 0 0 3px rgba(8,127,112,.12)!important;
+}
+input[type="checkbox"]{
+  min-height:0;border-radius:5px!important;
+  accent-color:var(--primary);
+}
+input[type="file"]{
+  background:#f5faf8!important;
+  padding:9px!important;
+}
+input[type="file"]::file-selector-button{
+  border:0;border-radius:9px;padding:7px 11px;
+  background:#dff2ec;color:#086b5e;font-weight:700;
+}
+label{color:#526965}
+hr{border-color:var(--line)}
+/* Login / registration */
+#auth-screen{padding-top:28px;padding-bottom:28px}
+#auth-screen>div{
+  position:relative;overflow:hidden;
+  border:1px solid rgba(255,255,255,.85)!important;
+  border-radius:28px!important;
+  padding:26px!important;
+  background:rgba(255,255,255,.94)!important;
+  box-shadow:0 24px 70px rgba(16,61,54,.13)!important;
+  backdrop-filter:blur(18px);
+}
+#auth-screen>div:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:6px;
+  background:linear-gradient(90deg,#07594f,#0c9b84,#c5ed72);
+}
+#brand-logo{
+  border-radius:22px!important;
+}
+#auth-screen h1{color:#123d37!important;letter-spacing:.02em}
+#auth-screen .flex.bg-slate-100{
+  background:#edf4f1!important;border-radius:14px!important;padding:5px!important;
+}
+#btn-show-login,#btn-show-register{
+  border-radius:11px!important;padding-top:10px!important;padding-bottom:10px!important;
+}
+#btn-show-login{color:#087f70!important}
+#form-login,#form-register{gap:14px}
+#btn-login-submit,#btn-reg-submit{
+  min-height:47px;border-radius:14px!important;
+  background:linear-gradient(120deg,#087f70,#07594f)!important;
+  box-shadow:0 9px 18px rgba(8,127,112,.2)!important;
+  letter-spacing:.01em;
+}
+#btn-reg-submit{background:linear-gradient(120deg,#0b987c,#08745f)!important}
+/* App shell and top bar */
+#main-app{min-height:100vh}
+#main-app header{
+  background:rgba(7,89,79,.96)!important;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 8px 24px rgba(8,54,48,.16)!important;
+  backdrop-filter:blur(16px);
+}
+#main-app header>div{
+  max-width:760px!important;padding-top:12px!important;padding-bottom:12px!important;
+}
+#main-app header img{border:2px solid rgba(197,237,114,.9)!important}
+#main-app header h1{font-size:18px!important;letter-spacing:.04em}
+#main-app header button{
+  background:rgba(255,255,255,.13)!important;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:12px!important;padding:7px 13px!important;
+}
+/* Main width and vertical rhythm */
+#main-app main{
+  max-width:760px!important;
+  padding:18px 16px 112px!important;
+  gap:18px!important;
+}
+#main-app main section{scroll-margin-top:76px}
+#view-home,#view-deposit,#view-history,#view-report,#view-notices,#view-gallery,#view-admin{
+  gap:17px!important;
+}
+/* Profile hero */
+#view-home>div:first-child{
+  background:linear-gradient(125deg,#07594f 0%,#087f70 58%,#123c36 100%)!important;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:25px!important;
+  padding:17px!important;
+  box-shadow:0 15px 30px rgba(7,89,79,.2)!important;
+  position:relative;overflow:hidden;
+}
+#view-home>div:first-child:after{
+  content:"";position:absolute;width:170px;height:170px;border-radius:50%;
+  right:-70px;top:-90px;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 0 0 22px rgba(255,255,255,.035),0 0 0 46px rgba(255,255,255,.025);
+  pointer-events:none;
+}
+#card-user-img{border-radius:18px!important;border-color:#d5f29b!important}
+#card-user-role{background:var(--accent)!important;color:#28420b!important}
+#card-user-status{background:rgba(197,237,114,.14)!important;color:#e5ffb9!important;border-color:rgba(197,237,114,.3)!important}
+#view-home>div:first-child button{border-radius:10px!important}
+/* Overview stats */
+#view-home .grid.grid-cols-4{gap:9px!important}
+#view-home .grid.grid-cols-4>div{
+  background:rgba(255,255,255,.96)!important;
+  border:1px solid var(--line)!important;border-radius:17px!important;
+  padding:12px 7px!important;box-shadow:var(--shadow-soft)!important;
+  min-width:0;
+}
+#view-home .grid.grid-cols-4 small{font-size:10px!important;color:#738783!important}
+#view-home .grid.grid-cols-4 b{font-size:clamp(11px,2.8vw,15px)!important}
+/* Feature tiles */
+#view-home .grid.grid-cols-2{gap:11px!important}
+#view-home .grid.grid-cols-2>div{
+  border:1px solid var(--line)!important;border-radius:21px!important;
+  padding:15px!important;background:linear-gradient(145deg,#fff,#f9fcfb)!important;
+  box-shadow:var(--shadow-soft)!important;
+  min-height:122px;position:relative;overflow:hidden;
+}
+#view-home .grid.grid-cols-2>div:after{
+  content:"";position:absolute;width:75px;height:75px;border-radius:50%;
+  right:-37px;bottom:-43px;background:rgba(8,127,112,.045);
+  pointer-events:none;
+}
+#view-home .grid.grid-cols-2>div>div:first-child{
+  border-radius:14px!important;width:42px!important;height:42px!important;
+}
+#view-home .grid.grid-cols-2 b{color:#203b36!important;font-size:13px!important}
+#view-home .grid.grid-cols-2 p{color:#80918d!important;font-size:10px!important}
+#view-home>button:last-child{
+  border-radius:15px!important;background:#fff5f3!important;border-color:#f4d8d2!important;
+}
+/* Common cards and panels */
+#main-app main .bg-white{
+  border-color:var(--line)!important;
+}
+#view-deposit .bg-white,#view-history .bg-white,#view-report .bg-white,
+#view-notices .bg-white,#view-gallery .bg-white,#view-admin .bg-white{
+  border-radius:22px!important;
+  box-shadow:var(--shadow-soft)!important;
+}
+#view-deposit .bg-gradient-to-br{
+  background:linear-gradient(135deg,#123e38,#07594f 70%,#087f70)!important;
+  border-radius:23px!important;box-shadow:0 14px 28px rgba(7,89,79,.17)!important;
+}
+#view-deposit .bg-gradient-to-br .bg-white\/10{
+  background:rgba(255,255,255,.105)!important;
+  border-color:rgba(255,255,255,.13)!important;border-radius:14px!important;
+}
+#view-deposit button[onclick*="copyToClipboard"]{
+  border-radius:9px!important;background:rgba(255,255,255,.2)!important;
+}
+#view-deposit button[onclick="userSubmitDepositRequest()"],
+#adm-page-deposit button[onclick="adminDirectAddDeposit()"],
+#adm-page-settings button[onclick="savePaymentSettings()"],
+#adm-page-notice button[onclick="adminAddNotice()"]{
+  min-height:44px;border-radius:13px!important;
+  box-shadow:0 7px 16px rgba(8,127,112,.13);
+}
+/* Admin hub */
+#admin-hub-grid>div:nth-child(2){
+  background:linear-gradient(120deg,#123e38,#07594f 70%,#0b8876)!important;
+  border-radius:22px!important;padding:18px!important;
+  box-shadow:0 13px 27px rgba(7,89,79,.17)!important;
+}
+#admin-hub-grid .grid.grid-cols-2>div{
+  border-radius:17px!important;border-color:var(--line)!important;
+  box-shadow:var(--shadow-soft)!important;padding:13px!important;
+  background:#fff!important;
+}
+#admin-hub-grid .grid.grid-cols-2>div>div:first-of-type{
+  border-radius:12px!important;
+}
+#adm-page-req,#adm-page-deposit,#adm-page-tour,#adm-page-statement,
+#adm-page-settings,#adm-page-notice{
+  border-radius:22px!important;border-color:var(--line)!important;
+  box-shadow:var(--shadow)!important;
+}
+/* Tables */
+#main-app table{border-collapse:separate;border-spacing:0;width:100%}
+#main-app thead th{
+  background:#edf5f2!important;color:#47635d!important;
+  font-weight:700;border-bottom:1px solid #dce9e4!important;
+}
+#main-app tbody tr:nth-child(even){background:#f8fbfa}
+#main-app tbody tr:hover{background:#edf7f3}
+#main-app th,#main-app td{padding:10px 9px!important}
+#main-app table td{border-bottom:1px solid #edf2f0}
+#main-app .overflow-x-auto{
+  border-radius:13px;
+  scrollbar-width:thin;scrollbar-color:#b8d1c9 transparent;
+}
+/* Section navigation / headings */
+#main-app main section>div:first-child button,
+#main-app main section>div:first-child span{
+  font-weight:700;
+}
+#main-app main section>div:first-child button{
+  padding:7px 11px;border-radius:10px;background:#e5f2ed;
+  color:#087260!important;
+}
+#main-app h3,#main-app h4{letter-spacing:.005em}
+#main-app .border-b{border-color:var(--line)!important}
+/* Bottom navigation */
+#main-app nav{
+  max-width:760px!important;left:50%!important;right:auto!important;
+  width:100%!important;transform:translateX(-50%);
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom))!important;
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid rgba(218,233,227,.95)!important;
+  border-bottom:0!important;border-radius:20px 20px 0 0!important;
+  box-shadow:0 -8px 30px rgba(18,55,49,.09)!important;
+  backdrop-filter:blur(18px);
+}
+#main-app nav button{min-width:48px}
+#main-app nav button span:first-child{font-size:19px!important}
+#main-app nav button span:last-child{font-size:10px!important}
+#bnav-center{
+  background:linear-gradient(145deg,#0b9884,#07594f)!important;
+  border:4px solid #f3f7f6!important;
+  box-shadow:0 8px 18px rgba(8,127,112,.27)!important;
+}
+/* Dialogs, loading and notifications */
+#custom-dialog-modal>div{
+  border-radius:24px!important;box-shadow:0 25px 70px rgba(10,40,35,.25)!important;
+}
+#app-global-loader>div{
+  border-radius:18px!important;box-shadow:0 16px 45px rgba(10,40,35,.16)!important;
+}
+#network-toast{border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(14px)}
+/* Modal and dynamically generated content */
+[id$="-modal"]>div,[id*="modal"]>div{
+  border-radius:22px;
+}
+#saved-accounts-box{background:#eff8f4!important;border-color:#d5eae1!important}
+#saved-accounts-box button{border-radius:10px}
+#notice-list>div,#adm-all-notices-container>div{
+  border-radius:15px!important;border-color:var(--line)!important;
+}
+#gallery-container img{border-radius:15px}
+#photo-preview-img{border-radius:50%!important}
+/* Scrollbars */
+*{scrollbar-width:thin;scrollbar-color:#c4d8d1 transparent}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-thumb{background:#c4d8d1;border-radius:20px}
+::-webkit-scrollbar-track{background:transparent}
+/* Desktop polish */
+@media(min-width:640px){
+  #auth-screen>div{padding:34px!important}
+  #main-app main{padding-top:24px!important}
+  #view-home .grid.grid-cols-2{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #view-home .grid.grid-cols-4>div{padding:15px 10px!important}
+}
+@media(max-width:380px){
+  #auth-screen>div{padding:20px!important}
+  #view-home .grid.grid-cols-4{gap:5px!important}
+  #view-home .grid.grid-cols-4>div{padding:9px 4px!important}
+  #view-home .grid.grid-cols-4 small{font-size:8px!important}
+  #view-home .grid.grid-cols-4 b{font-size:10px!important}
+  #view-home .grid.grid-cols-2>div{padding:12px!important}
+  #main-app nav{padding-left:5px!important;padding-right:5px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation-duration:.01ms!important}
+}
+</style>
+
 </head>
 <body class="text-slate-800 pb-24 select-none">
 
@@ -218,7 +525,7 @@
               
               <!-- ৩য় লাইন: ফোন নম্বর (বামে) এবং প্রোফাইল এডিট বাটন (ডানে) -->
               <div class="flex items-center justify-between gap-2 pt-0.5">
-                <p id="card-user-phone" class="text-xs text-indigo-200 font-mono">017xxxxxxxx</p>
+                <p id="card-user-phone" class="text-xs text-indigo-200 font-mono mt-0.5">017xxxxxxxx</p>
                 <button onclick="openUserProfileEditModal()" class="px-2.5 py-1 bg-white/15 hover:bg-white/25 active:scale-95 text-white border border-white/30 rounded-xl text-[10px] font-bold flex items-center gap-1 transition shadow-sm shrink-0">
                   <span>✏️</span> <span>প্রোফাইল এডিট</span>
                 </button>
@@ -457,7 +764,7 @@
               <div><b class="text-xs text-slate-800 block">সেটিংস খাতা</b><p class="text-[9px] text-slate-400">পেমেন্ট নম্বর পরিবর্তন</p></div>
             </div>
 
-            <div onclick="openAdminSubPage('adm-page-notice')" class="bg-white p-4 rounded-3xl border border-indigo-100 shadow-sm hover:shadow-md transition cursor-pointer active:scale-95 space-y-1.5">
+            <div onclick="openAdminSubPage('adm-page-notice')" class="bg-white p-3 rounded-2xl border border-indigo-100 shadow-sm hover:shadow-md transition cursor-pointer active:scale-95 space-y-1.5">
               <div class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm">📢</div>
               <div><b class="text-xs text-slate-800 block">নোটিশ খাতা</b><p class="text-[9px] text-slate-400">নোটিশ প্রকাশ ও ব্যবস্থাপনা</p></div>
             </div>
@@ -706,7 +1013,7 @@
   </div>
 
   <!-- ================= MODAL: USER PROFILE EDIT ================= -->
-  <div id="user-profile-edit-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div id="user-profile-edit-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[90] hidden flex items-center justify-center p-4">
     <div class="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl space-y-3.5 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b pb-2">
         <h3 class="font-bold text-sm text-slate-800 flex items-center gap-1.5">
@@ -749,55 +1056,8 @@
     </div>
   </div>
 
-  <!-- ================= MODAL: CROPPER ================= -->
-  <div id="crop-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex flex-col items-center justify-center p-4">
-    <div class="bg-white w-full max-w-sm rounded-3xl p-4 shadow-2xl space-y-3 flex flex-col max-h-[90vh]">
-      <div class="flex justify-between items-center border-b pb-2">
-        <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">✂️ প্রোফাইল ছবি ক্রপ করুন</h3>
-        <button onclick="closeCropModal()" class="text-slate-400 hover:text-slate-600 text-lg">&times;</button>
-      </div>
-      <div class="w-full h-64 bg-slate-900 rounded-2xl overflow-hidden flex items-center justify-center">
-        <img id="image-to-crop" class="max-w-full max-h-full block"/>
-      </div>
-      <p class="text-[10px] text-slate-400 text-center">আঙুল দিয়ে টেনে বা জুম করে মুখের অংশটি বৃত্তে আনুন</p>
-      <div class="flex gap-2 pt-1">
-        <button onclick="closeCropModal()" class="flex-1 py-2 bg-slate-100 text-slate-600 font-bold rounded-xl text-xs">বাতিল</button>
-        <button onclick="applyCrop()" class="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow">ক্রপ সম্পন্ন করুন ✓</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- PRINT REPORT CONTAINER -->
-  <div id="print-report-area" class="hidden p-6 bg-white text-slate-900 font-sans">
-    <div class="text-center border-b-2 border-slate-800 pb-3 mb-4">
-      <h1 class="text-2xl font-bold">ভবঘুরে - ট্যুর ও ফান্ড ম্যানেজার</h1>
-      <p id="print-report-title" class="text-sm font-bold text-slate-700 mt-1">মাসিক স্টেটমেন্ট রিপোর্ট</p>
-      <small id="print-date" class="text-[11px] text-slate-500"></small>
-    </div>
-    <div class="grid grid-cols-3 gap-3 mb-4 p-3 bg-slate-100 rounded-lg text-center font-bold text-xs">
-      <div>মোট সংগৃহীত ফান্ড: <span id="rep-total-fund" class="text-emerald-700 block text-sm"></span></div>
-      <div>মোট ট্যুর খরচ: <span id="rep-total-exp" class="text-rose-700 block text-sm"></span></div>
-      <div>বর্তমান নেট ব্যালেন্স: <span id="rep-net-balance" class="text-indigo-700 block text-sm"></span></div>
-    </div>
-    <h3 class="font-bold text-xs border-b pb-1 mb-2 text-emerald-800">পরিশোধিত তালিকা (Paid Deposits):</h3>
-    <table class="w-full text-xs border-collapse border border-slate-300 mb-4">
-      <thead><tr class="bg-slate-200"><th class="border p-1">তারিখ</th><th class="border p-1">সদস্য</th><th class="border p-1">ফোন</th><th class="border p-1">খাত/মাস</th><th class="border p-1">মেথড / TrxID</th><th class="border p-1 text-right">পরিমাণ (৳)</th></tr></thead>
-      <tbody id="print-deposit-rows"></tbody>
-    </table>
-    <h3 class="font-bold text-xs border-b pb-1 mb-2 text-rose-800">অপরিশোধিত সদস্য তালিকা (Unpaid Members):</h3>
-    <table class="w-full text-xs border-collapse border border-slate-300 mb-4">
-      <thead><tr class="bg-rose-100"><th class="border p-1">ক্রমিক</th><th class="border p-1">সদস্যের নাম</th><th class="border p-1">ফোন নম্বর</th><th class="border p-1">পদবী</th><th class="border p-1 text-center">স্ট্যাটাস</th></tr></thead>
-      <tbody id="print-unpaid-rows"></tbody>
-    </table>
-    <div class="flex justify-between mt-12 pt-4 border-t border-slate-400 text-xs">
-      <span>প্রস্তুতকারক: হিসাব রক্ষক</span><span>অনুমোদনকারী অ্যাডমিন</span>
-    </div>
-  </div>
-
-  <canvas id="receipt-canvas" width="600" height="750" class="hidden"></canvas>
-
-  <!-- MODAL: ADMIN EDIT USER -->
-  <div id="edit-user-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <!-- ================= MODAL: ADMIN EDIT USER ================= -->
+  <div id="edit-user-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[90] hidden flex items-center justify-center p-4">
     <div class="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl space-y-3.5 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center border-b pb-2">
         <h3 class="font-bold text-sm text-slate-800">ইউজার তথ্য পরিবর্তন (Admin Edit)</h3>
@@ -832,8 +1092,26 @@
     </div>
   </div>
 
+  <!-- MODAL: CROPPER -->
+  <div id="crop-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[100000] hidden flex flex-col items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-4 shadow-2xl space-y-3 flex flex-col max-h-[90vh]">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 class="font-bold text-xs text-slate-800 flex items-center gap-1.5">✂️ প্রোফাইল ছবি ক্রপ করুন</h3>
+        <button onclick="closeCropModal()" class="text-slate-400 hover:text-slate-600 text-lg">&times;</button>
+      </div>
+      <div class="w-full h-64 bg-slate-900 rounded-2xl overflow-hidden flex items-center justify-center">
+        <img id="image-to-crop" class="max-w-full max-h-full block"/>
+      </div>
+      <p class="text-[10px] text-slate-400 text-center">আঙুল দিয়ে টেনে বা জুম করে মুখের অংশটি বৃত্তে আনুন</p>
+      <div class="flex gap-2 pt-1">
+        <button onclick="closeCropModal()" class="flex-1 py-2 bg-slate-100 text-slate-600 font-bold rounded-xl text-xs">বাতিল</button>
+        <button onclick="applyCrop()" class="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow">ক্রপ সম্পন্ন করুন ✓</button>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: GALLERY UPLOAD -->
-  <div id="gallery-upload-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div id="gallery-upload-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[90] hidden flex items-center justify-center p-4">
     <div class="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl space-y-3.5">
       <div class="flex justify-between items-center border-b pb-2">
         <h3 class="font-bold text-sm text-slate-800">গ্যালারিতে ছবি যোগ করুন</h3>
@@ -859,7 +1137,7 @@
   </div>
 
   <!-- MODAL: MONTH PICKER -->
-  <div id="month-picker-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div id="month-picker-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[90] hidden flex items-center justify-center p-4">
     <div class="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl space-y-4">
       <div class="flex justify-between items-center border-b pb-2">
         <div><h3 class="font-bold text-sm text-slate-800">মাস নির্বাচন করুন</h3><p class="text-[10px] text-slate-400">একাধিক মাসে ক্লিক করতে পারেন</p></div>
@@ -880,6 +1158,35 @@
       </div>
     </div>
   </div>
+
+  <!-- PRINT REPORT CONTAINER -->
+  <div id="print-report-area" class="hidden p-6 bg-white text-slate-900 font-sans">
+    <div class="text-center border-b-2 border-slate-800 pb-3 mb-4">
+      <h1 class="text-2xl font-bold">ভবঘুরে - ট্যুর ও ফান্ড ম্যানেজার</h1>
+      <p id="print-report-title" class="text-sm font-bold text-slate-700 mt-1">মাসিক স্টেটমেন্ট রিপোর্ট</p>
+      <small id="print-date" class="text-[11px] text-slate-500"></small>
+    </div>
+    <div class="grid grid-cols-3 gap-3 mb-4 p-3 bg-slate-100 rounded-lg text-center font-bold text-xs">
+      <div>মোট সংগৃহীত ফান্ড: <span id="rep-total-fund" class="text-emerald-700 block text-sm"></span></div>
+      <div>মোট ট্যুর খরচ: <span id="rep-total-exp" class="text-rose-700 block text-sm"></span></div>
+      <div>বর্তমান নেট ব্যালেন্স: <span id="rep-net-balance" class="text-indigo-700 block text-sm"></span></div>
+    </div>
+    <h3 class="font-bold text-xs border-b pb-1 mb-2 text-emerald-800">পরিশোধিত তালিকা (Paid Deposits):</h3>
+    <table class="w-full text-xs border-collapse border border-slate-300 mb-4">
+      <thead><tr class="bg-slate-200"><th class="border p-1">তারিখ</th><th class="border p-1">সদস্য</th><th class="border p-1">ফোন</th><th class="border p-1">খাত/মাস</th><th class="border p-1">মেথড / TrxID</th><th class="border p-1 text-right">পরিমাণ (৳)</th></tr></thead>
+      <tbody id="print-deposit-rows"></tbody>
+    </table>
+    <h3 class="font-bold text-xs border-b pb-1 mb-2 text-rose-800">অপরিশোধিত সদস্য তালিকা (Unpaid Members):</h3>
+    <table class="w-full text-xs border-collapse border border-slate-300 mb-4">
+      <thead><tr class="bg-rose-100"><th class="border p-1">ক্রমিক</th><th class="border p-1">সদস্যের নাম</th><th class="border p-1">ফোন নম্বর</th><th class="border p-1">পদবী</th><th class="border p-1 text-center">স্ট্যাটাস</th></tr></thead>
+      <tbody id="print-unpaid-rows"></tbody>
+    </table>
+    <div class="flex justify-between mt-12 pt-4 border-t border-slate-400 text-xs">
+      <span>প্রস্তুতকারক: হিসাব রক্ষক</span><span>অনুমোদনকারী অ্যাডমিন</span>
+    </div>
+  </div>
+
+  <canvas id="receipt-canvas" width="600" height="750" class="hidden"></canvas>
 
   <!-- ================= JAVASCRIPT ================= -->
   <script>
@@ -996,14 +1303,14 @@
       if (networkToastTimer) clearTimeout(networkToastTimer);
 
       if (isOnline) {
-        toast.className = "fixed top-4 left-4 right-4 max-w-sm mx-auto z-[99999] p-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 bg-emerald-600 text-white border border-emerald-500 translate-y-0";
+        toast.className = "fixed top-4 left-4 right-4 max-w-sm mx-auto z-[100030] p-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 bg-emerald-600 text-white border border-emerald-500 translate-y-0";
         icon.className = "w-8 h-8 rounded-xl bg-white/20 text-white flex items-center justify-center text-base shrink-0";
         icon.innerHTML = "✓";
         title.innerText = "ইন্টারনেট সংযোগ চালু হয়েছে";
         desc.innerText = "আপনি আবার অনলাইনে সংযুক্ত আছেন।";
         networkToastTimer = setTimeout(() => { toast.classList.add('hidden'); }, 3000);
       } else {
-        toast.className = "fixed top-4 left-4 right-4 max-w-sm mx-auto z-[99999] p-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 bg-rose-600 text-white border border-rose-500 translate-y-0";
+        toast.className = "fixed top-4 left-4 right-4 max-w-sm mx-auto z-[100030] p-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 bg-rose-600 text-white border border-rose-500 translate-y-0";
         icon.className = "w-8 h-8 rounded-xl bg-white/20 text-white flex items-center justify-center text-base shrink-0";
         icon.innerHTML = "⚠️";
         title.innerText = "ইন্টারনেট সংযোগ নেই!";
@@ -1091,19 +1398,28 @@
       }
     }
 
-    // CROPPER FUNCTIONS
+    // ================= CROPPER FUNCTIONS =================
     function openCropModal(input, mode) {
-      const file = input.files[0];
+      const file = input.files && input.files[0];
       if (!file) return;
       cropModeTarget = mode;
+      input.value = ''; // Reset input to re-select same file if needed
+      
       const reader = new FileReader();
       reader.onload = (e) => {
         const imageElement = document.getElementById('image-to-crop');
+        if (cropperInstance) {
+          cropperInstance.destroy();
+          cropperInstance = null;
+        }
         imageElement.src = e.target.result;
         document.getElementById('crop-modal').classList.remove('hidden');
-        if (cropperInstance) cropperInstance.destroy();
         cropperInstance = new Cropper(imageElement, {
-          aspectRatio: 1, viewMode: 1, autoCropArea: 0.85, responsive: true, guides: false
+          aspectRatio: 1, 
+          viewMode: 1, 
+          autoCropArea: 0.85, 
+          responsive: true, 
+          guides: false
         });
       };
       reader.readAsDataURL(file);
@@ -1205,14 +1521,14 @@
 
     // BACK NAVIGATION HANDLER
     function handleAppBack() {
-      const userEditModal = document.getElementById('user-profile-edit-modal');
-      if (userEditModal && !userEditModal.classList.contains('hidden')) { closeUserProfileEditModal(); return; }
-      const customModal = document.getElementById('custom-dialog-modal');
-      if (customModal && !customModal.classList.contains('hidden')) { customModal.classList.add('hidden'); return; }
-      const editModal = document.getElementById('edit-user-modal');
-      if (editModal && !editModal.classList.contains('hidden')) { closeEditModal(); return; }
       const cropModal = document.getElementById('crop-modal');
       if (cropModal && !cropModal.classList.contains('hidden')) { closeCropModal(); return; }
+      const customModal = document.getElementById('custom-dialog-modal');
+      if (customModal && !customModal.classList.contains('hidden')) { customModal.classList.add('hidden'); return; }
+      const userEditModal = document.getElementById('user-profile-edit-modal');
+      if (userEditModal && !userEditModal.classList.contains('hidden')) { closeUserProfileEditModal(); return; }
+      const editModal = document.getElementById('edit-user-modal');
+      if (editModal && !editModal.classList.contains('hidden')) { closeEditModal(); return; }
       const monthModal = document.getElementById('month-picker-modal');
       if (monthModal && !monthModal.classList.contains('hidden')) { closeMonthPicker(); return; }
       const galleryModal = document.getElementById('gallery-upload-modal');
@@ -1941,13 +2257,12 @@
       }
     }
 
-    // FINANCIALS & NOTICES (৪টি কার্ড হিসাব ও শেয়ার ফান্ড সিঙ্ক)
+    // FINANCIALS & NOTICES
     async function loadFinancialsAndNotices() {
       // 1. My Deposits
       const { data: myDepAll } = await db.from('toursathi_deposits').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false });
       const myApproved = (myDepAll || []).filter(d => (d.status || 'approved') === 'approved');
       
-      // আমার মাসিক জমা
       const myRegularTotal = myApproved.filter(d => (d.deposit_type || 'monthly') === 'monthly').reduce((acc, c) => acc + Number(c.amount || 0), 0);
       document.getElementById('stat-my-deposit').innerText = '৳ ' + myRegularTotal.toLocaleString();
       document.getElementById('my-deposit-count').innerText = `${myDepAll?.length || 0} টি`;
@@ -1971,21 +2286,18 @@
         myDepTbody.innerHTML = `<tr><td colspan="5" class="p-4 text-center text-slate-400">কোনো জমার তথ্য নেই</td></tr>`;
       }
 
-      // 2. All Deposits (মোট ফান্ড ও শেয়ার ফান্ড আলাদা হিসাব)
+      // 2. All Deposits
       const { data: allDep } = await db.from('toursathi_deposits').select('*').order('created_at', { ascending: false });
       allDepositsCache = allDep || [];
 
       const approvedAll = allDepositsCache.filter(d => (d.status || 'approved') === 'approved');
 
-      // মোট শেয়ার ফান্ড
       const totalShareFund = approvedAll.filter(d => d.deposit_type === 'share').reduce((acc, c) => acc + Number(c.amount || 0), 0);
       document.getElementById('stat-share-fund').innerText = '৳ ' + totalShareFund.toLocaleString();
 
-      // মোট সার্বিক ফান্ড (সঞ্চয় + শেয়ার)
       const totalOverallFund = approvedAll.reduce((acc, c) => acc + Number(c.amount || 0), 0);
       document.getElementById('stat-total-fund').innerText = '৳ ' + totalOverallFund.toLocaleString();
 
-      // খরচ ও ব্যালেন্স
       const { data: allExp } = await db.from('toursathi_expenses').select('amount');
       const totalExpense = (allExp || []).reduce((acc, c) => acc + Number(c.amount || 0), 0);
       document.getElementById('stat-net-balance').innerText = '৳ ' + (totalOverallFund - totalExpense).toLocaleString();
@@ -2210,7 +2522,7 @@
     }
 
     function openEditModal(userId) {
-      const user = allUsersCache.find(u => u.id === userId);
+      const user = allUsersCache.find(u => String(u.id) === String(userId));
       if (!user) return;
 
       document.getElementById('edit-user-id').value = user.id;
@@ -2251,7 +2563,7 @@
           await appAlert("আপডেট ব্যর্থ: " + error.message, "error"); 
         } else {
           closeEditModal();
-          if (currentUser.id === Number(id)) {
+          if (String(currentUser.id) === String(id)) {
             currentUser.name = name; currentUser.phone = phone; currentUser.password = password;
             currentUser.role = role; currentUser.status = status;
             if (editUserPhotoBase64) currentUser.photo = editUserPhotoBase64;
